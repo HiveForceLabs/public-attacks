@@ -1,4 +1,4 @@
-        $CSource =@(
+        $CSource =@"
         #include <windows.h>
         __declspec(dllexport) void $ExportedFunction()
         {
@@ -8,4 +8,4 @@
         {
             return TRUE;
         }
-        )
+        "@
