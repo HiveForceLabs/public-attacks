@@ -8,8 +8,4 @@ https://github.com/MomenMatouk/ruby-vgr/raw/refs/heads/main/mnemotechnic/ruby_vg
 https://github.com/jayasuryapalagiri/Alien-Nostromo-archives/raw/refs/heads/main/cradge/Nostromo-Alien-archives-3.9.zip
 https://github.com/Eman420-art/saywhat_menu/raw/refs/heads/main/pyracene/saywhat-menu-v3.0-alpha.3.zip
 https://github.com/xplam-den/Snake-Game-with-RL/raw/refs/heads/master/algophilist/RL_with_Game_Snake_v2.5.zip
-http://117.217.196.124:44815/i
-http://36.88.136.194:59043/bin.sh
-http://196.189.197.131:39690/i
-https://cdn3-cloudservices-verify.t3.storage.dev/follow/index.html
-https://chiohe.biz.id
+
